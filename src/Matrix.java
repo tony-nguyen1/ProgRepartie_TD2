@@ -1,3 +1,5 @@
+import java.sql.SQLOutput;
+
 /******************************************************************************
  *  Compilation:  javac Matrix.java
  *  Execution:    java Matrix
@@ -9,7 +11,7 @@
 final public class Matrix{
     private final int M;             // number of rows
     private final int N;             // number of columns
-    private final double[][] data;   // M-by-N array
+    private /*final*/ double[][] data;   // M-by-N array
     private static int complexity;
 
     // create M-by-N matrix of 0's
@@ -119,20 +121,64 @@ final public class Matrix{
         return C;
     }
 
+    /***
+     * Pré-requis :
+     * this et B, 2 Matrix de largeur N = 2 et longeur M = 2, 2*2
+     *
+     * Fait un produit matricielle avec des Threads
+     *
+     * @param B la matrice droite à multiplier
+     * @return le produit de this et B
+     */
     public Matrix prdtMatricielle(Matrix B) {
-        Matrix result = new Matrix(this.M, B.N);
+        Matrix result = new Matrix(this.M, B.N); //initialisé à 0.000
         Matrix A = this;
 
-        Operande op;
+        //dimensions des sous matrices
+        int lar, lon;
+        lon = A.M/2;
+        lar = A.N/2;
 
-        /*
-        * A
-        * B
-        * C
-        * D
-        * */
+        //Création des 8 threads
+        Operande op1_gauche, op2_gauche, op3_gauche, op4_gauche, op1_droite, op2_droite, op3_droite, op4_droite;
+        op1_gauche = new Operande(result, 0,          0, lar, lon, A, B, "gauche");
+        op2_gauche = new Operande(result,0,       A.N/2, lar, lon, A, B, "gauche");
+        op3_gauche = new Operande(result, A.M/2,      0, lar, lon, A, B, "gauche");
+        op4_gauche = new Operande(result, A.M/2,          lar,  lar, lon, A, B, "gauche");
+        op1_droite = new Operande(result, 0,          0, lar, lon, A, B, "droite");
+        op2_droite = new Operande(result,0,       A.N/2, lar, lon, A, B, "droite");
+        op3_droite = new Operande(result, A.M/2,      0, lar, lon, A, B, "droite");
+        op4_droite = new Operande(result, A.M/2, A.N/2,  lar, lon, A, B, "droite");
 
         //démarrage des threads
+        op1_gauche.start();
+        op2_gauche.start();
+        op3_gauche.start();
+        op4_gauche.start();
+        op1_droite.start();
+        op2_droite.start();
+        op3_droite.start();
+        op4_droite.start();
+
+        //ces threads d'abord
+        try {
+            op1_gauche.join();
+            op2_gauche.join();
+            op3_gauche.join();
+            op4_gauche.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        //puis ces threads
+        try {
+            op1_droite.join();
+            op2_droite.join();
+            op3_droite.join();
+            op4_droite.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         return result;
     }
@@ -154,8 +200,7 @@ final public class Matrix{
 
     // test client
     public static void main(String[] args) {
-
-        Matrix A = Matrix.random(15, 10);
+        /*Matrix A = Matrix.random(15, 10);
         A.show();
         System.out.println();
 
@@ -168,6 +213,20 @@ final public class Matrix{
         System.out.println();
 
         Matrix.showComp();
-        System.out.println();
+        System.out.println();*/
+
+        Matrix A = new Matrix(new double[][]{{1.0, 2.0},{3.0,4.0}});
+        Matrix B = new Matrix(new double[][]{{5.0, 6.0},{7.0,8.0}});
+
+        System.out.println("Matrix A");
+        A.show();
+
+        System.out.println("Matrix B");
+        B.show();
+
+        System.out.println("Matrix C");
+        Matrix C = A.prdtMatricielle(B);
+        C.show();
+
     }
 }

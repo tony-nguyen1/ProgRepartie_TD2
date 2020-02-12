@@ -1,7 +1,7 @@
 public class Operande extends Thread {
 
     /*** La matrice résultat ***/
-    private static Matrix result;
+    private Matrix matrixResult;
 
     /*** Les matrices M et N ***/
     private Matrix M;
@@ -15,37 +15,56 @@ public class Operande extends Thread {
     private int dimLargeur;
     private int dimLongueur;
 
-    /*** Variables de calcul***/
-    private double sommeGauche;
-    private double sommeDroite;
-
     /*** Pour la reconnaitre ***/
     private String id;
 
-    //TODO faire des variables pour la matrice M et les mêmes pour la matrice N
+    public Operande(Matrix result, int startR, int startC, int dimLargeur, int dimLongueur, Matrix m, Matrix n, String id) {
+        this.matrixResult = result;
+        M = m;
+        N = n;
+        this.startR = startR;
+        this.startC = startC;
+        this.dimLargeur = dimLargeur;
+        this.dimLongueur = dimLongueur;
+        this.id = id;
+    }
 
-    /***
-     * Fait le calcul ou continue de faire des threads
-     */
-    public void calcul() {
-        Operande uneOperande;
-        if (dimLargeur == 1 || dimLongueur == 1)
+    /*** Fait une multiplication entre 2 éléments des Matrix M et N et additionne le produit dans la Matrix résultat matrixResult */
+    @Override
+    public void run() {
+        double tabResult[][] = matrixResult.getData();
+        double prdtM, prdtN;
+
+        if (this.id.equals("gauche"))
         {
-            double terme1, terme2;
-            //on fait la multiplication
-            if (id.equals("gauche")){
-                terme1 = M.getData()[0][0];
-            } else if (id.equals("droite")) {
+            prdtM = M.getData()[startR][startC];
 
-            }
+            if (startR == 0 && startC == 1) { prdtN = N.getData()[startR + 1][startC]; }
+            else if (startR == 1 && startC == 0) { prdtN = N.getData()[startR - 1][startC]; }
+            else { prdtN = N.getData()[startR][startC]; }
+
+            tabResult[startR][startC] += prdtM * prdtN;
+            //System.out.println("(" + startR + "," + startC + ") = " + prdtM + " * " + prdtN + " = " + prdtM * prdtN);
         }
-        else {
-            //on crée un nouveau thread Operande
-            uneOperande = new Operande();
+        else if (this.id.equals("droite"))
+        {
+            //choix du 1er produit de la multiplication
+            if (startC == 0) { prdtM = M.getData()[startR][startC + 1]; }
+            else if (startC == 1) { prdtM = M.getData()[startR][startC - 1]; }
+            else { prdtM = M.getData()[startR][startC]; }
 
-            uneOperande.start();
+            //choix du 2e produit de la multiplication
+            if (startR == 0 && startC == 0) { prdtN = N.getData()[startR + 1][startC]; }
+            else if (startR == 1 && startC == 1) { prdtN = N.getData()[startR - 1][startC]; }
+            else { prdtN = N.getData()[startR][startC]; }
+
+            tabResult[startR][startC] += prdtM * prdtN;
+            //System.out.println("(" + startR + "," + startC + ") = " + prdtM + " * " + prdtN + " = " + prdtM * prdtN);
         }
-
+        else
+        {
+            throw new RuntimeException("wrong Operande.id : " + this.id);
+        }
     }
 
 }
