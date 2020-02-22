@@ -11,7 +11,7 @@ import java.sql.SQLOutput;
 final public class Matrix{
     private final int M;             // number of rows
     private final int N;             // number of columns
-    private /*final*/ double[][] data;   // M-by-N array
+    private final double[][] data;   // M-by-N array
     private static int complexity;
 
     // create M-by-N matrix of 0's
@@ -121,6 +121,10 @@ final public class Matrix{
         return C;
     }
 
+    public static void incrementeComplexity() {
+        Matrix.complexity++;
+    }
+
     /***
      * Pré-requis :
      * this et B, 2 Matrix de largeur N = 2 et longeur M = 2, 2*2
@@ -160,18 +164,13 @@ final public class Matrix{
         op3_droite.start();
         op4_droite.start();
 
-        //ces threads d'abord
+        //pour assurer la fin du traitement de TOUS les threads
         try {
             op1_gauche.join();
             op2_gauche.join();
             op3_gauche.join();
             op4_gauche.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
 
-        //puis ces threads
-        try {
             op1_droite.join();
             op2_droite.join();
             op3_droite.join();
@@ -200,23 +199,12 @@ final public class Matrix{
 
     // test client
     public static void main(String[] args) {
-        /*Matrix A = Matrix.random(15, 10);
-        A.show();
-        System.out.println();
-
-        Matrix B = Matrix.random(10, 20);
-        B.show();
-        System.out.println();
-
-        Matrix C = A.times(B);
-        C.show();
-        System.out.println();
-
-        Matrix.showComp();
-        System.out.println();*/
-
-        Matrix A = new Matrix(new double[][]{{1.0, 2.0},{3.0,4.0}});
-        Matrix B = new Matrix(new double[][]{{5.0, 6.0},{7.0,8.0}});
+        Matrix A = new Matrix(new double[][]{
+                        {1.0, 2.0},
+                        {3.0,4.0}});
+        Matrix B = new Matrix(new double[][]{
+                {5.0, 6.0},
+                {7.0,8.0}});
 
         System.out.println("Matrix A");
         A.show();
@@ -224,9 +212,15 @@ final public class Matrix{
         System.out.println("Matrix B");
         B.show();
 
-        System.out.println("Matrix C");
+        long a = System.currentTimeMillis();
         Matrix C = A.prdtMatricielle(B);
+        long b = System.currentTimeMillis();
+
+        System.out.println("Matrix C");
         C.show();
+
+        Matrix.showComp();
+        System.out.println(b - a + " ms");
 
     }
 }

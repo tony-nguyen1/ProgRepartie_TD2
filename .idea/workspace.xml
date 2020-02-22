@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="759079eb-0ba4-49a7-bae8-79df544ae7fb" name="Default Changelist" comment="Finit">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="759079eb-0ba4-49a7-bae8-79df544ae7fb" name="Default Changelist" comment="ça marche">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TD2/Matrix.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TD2/Matrix.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TD2/Operande.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TD2/Operande.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Matrix.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Operande.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Operande.java" afterDir="false" />
     </list>
@@ -82,7 +82,8 @@
       <option name="presentableId" value="Default" />
       <updated>1581510483328</updated>
       <workItem from="1581510487724" duration="6150000" />
-      <workItem from="1581519011182" duration="6870000" />
+      <workItem from="1581519011182" duration="7055000" />
+      <workItem from="1581853712749" duration="3580000" />
     </task>
     <servers />
   </component>
@@ -94,10 +95,16 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ça marche" />
+    <option name="LAST_COMMIT_MESSAGE" value="ça marche" />
   </component>
 </project>

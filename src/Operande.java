@@ -33,38 +33,38 @@ public class Operande extends Thread {
     @Override
     public void run() {
         double tabResult[][] = matrixResult.getData();
-        double prdtM, prdtN;
+        double facteurM, facteurN;
+
+        Matrix.incrementeComplexity();
 
         if (this.id.equals("gauche"))
         {
-            prdtM = M.getData()[startR][startC];
+            facteurM = M.getData()[startR][startC];
 
-            if (startR == 0 && startC == 1) { prdtN = N.getData()[startR + 1][startC]; }
-            else if (startR == 1 && startC == 0) { prdtN = N.getData()[startR - 1][startC]; }
-            else { prdtN = N.getData()[startR][startC]; }
-
-            tabResult[startR][startC] += prdtM * prdtN;
-            //System.out.println("(" + startR + "," + startC + ") = " + prdtM + " * " + prdtN + " = " + prdtM * prdtN);
+            if (startR == 0 && startC == 1) { facteurN = N.getData()[startR + 1][startC]; }
+            else if (startR == 1 && startC == 0) { facteurN = N.getData()[startR - 1][startC]; }
+            else { facteurN = N.getData()[startR][startC]; }
         }
         else if (this.id.equals("droite"))
         {
-            //choix du 1er produit de la multiplication
-            if (startC == 0) { prdtM = M.getData()[startR][startC + 1]; }
-            else if (startC == 1) { prdtM = M.getData()[startR][startC - 1]; }
-            else { prdtM = M.getData()[startR][startC]; }
+            //choix du 1er facteur de la multiplication
+            if (startC == 0) { facteurM = M.getData()[startR][startC + 1]; }
+            else if (startC == 1) { facteurM = M.getData()[startR][startC - 1]; }
+            else { facteurM = M.getData()[startR][startC]; }
 
-            //choix du 2e produit de la multiplication
-            if (startR == 0 && startC == 0) { prdtN = N.getData()[startR + 1][startC]; }
-            else if (startR == 1 && startC == 1) { prdtN = N.getData()[startR - 1][startC]; }
-            else { prdtN = N.getData()[startR][startC]; }
-
-            tabResult[startR][startC] += prdtM * prdtN;
-            //System.out.println("(" + startR + "," + startC + ") = " + prdtM + " * " + prdtN + " = " + prdtM * prdtN);
+            //choix du 2e facteur de la multiplication
+            if (startR == 0 && startC == 0) { facteurN = N.getData()[startR + 1][startC]; }
+            else if (startR == 1 && startC == 1) { facteurN = N.getData()[startR - 1][startC]; }
+            else { facteurN = N.getData()[startR][startC]; }
         }
         else
         {
             throw new RuntimeException("wrong Operande.id : " + this.id);
         }
+
+        //ajout du résultat dans la bonne case
+        tabResult[startR][startC] += facteurM * facteurN;
+        //System.out.println("(" + startR + "," + startC + ") = " + facteurM + " * " + facteurN + " = " + facteurM * facteurN);
     }
 
 }
