@@ -1,3 +1,5 @@
+package try1;
+
 public class Operande extends Thread {
 
     /*** La matrice résultat ***/
@@ -29,7 +31,7 @@ public class Operande extends Thread {
         this.id = id;
     }
 
-    /*** Fait une multiplication entre 2 éléments des Matrix M et N et additionne le produit dans la Matrix résultat matrixResult */
+    /*** Fait une multiplication entre 2 éléments des try1.Matrix M et N et additionne le produit dans la try1.Matrix résultat matrixResult */
     @Override
     public void run() {
         double tabResult[][] = matrixResult.getData();
@@ -59,7 +61,7 @@ public class Operande extends Thread {
         }
         else
         {
-            throw new RuntimeException("wrong Operande.id : " + this.id);
+            throw new RuntimeException("wrong try1.Operande.id : " + this.id);
         }
 
         //ajout du résultat dans la bonne case

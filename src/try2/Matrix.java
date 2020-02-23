@@ -1,13 +1,13 @@
-import java.sql.SQLOutput;
+package try2;
 
 /******************************************************************************
- *  Compilation:  javac Matrix.java
- *  Execution:    java Matrix
+ *  Compilation:  javac try1.Matrix.java
+ *  Execution:    java try1.Matrix
  *                  https://introcs.cs.princeton.edu/java/95linear/Matrix.java
  *  A bare-bones immutable data type for M-by-N matrices.
  *
  ******************************************************************************/
-
+@SuppressWarnings("Duplicates")
 final public class Matrix{
     private final int M;             // number of rows
     private final int N;             // number of columns
@@ -127,7 +127,7 @@ final public class Matrix{
 
     /***
      * Pré-requis :
-     * this et B, 2 Matrix de largeur N = 2 et longeur M = 2, 2*2
+     * this et B, 2 try1.Matrix de largeur N = 2 et longeur M = 2, 2*2
      *
      * Fait un produit matricielle avec des Threads
      *
@@ -148,7 +148,8 @@ final public class Matrix{
         op1_gauche = new Operande(result, 0,          0, lar, lon, A, B, "gauche");
         op2_gauche = new Operande(result,0,       A.N/2, lar, lon, A, B, "gauche");
         op3_gauche = new Operande(result, A.M/2,      0, lar, lon, A, B, "gauche");
-        op4_gauche = new Operande(result, A.M/2,          lar,  lar, lon, A, B, "gauche");
+        op4_gauche = new Operande(result, A.M/2, A.N/2,  lar, lon, A, B, "gauche");
+
         op1_droite = new Operande(result, 0,          0, lar, lon, A, B, "droite");
         op2_droite = new Operande(result,0,       A.N/2, lar, lon, A, B, "droite");
         op3_droite = new Operande(result, A.M/2,      0, lar, lon, A, B, "droite");
@@ -200,27 +201,40 @@ final public class Matrix{
     // test client
     public static void main(String[] args) {
         Matrix A = new Matrix(new double[][]{
-                        {1.0, 2.0},
-                        {3.0,4.0}});
+                        {1.0, 2.0, 3.0, 4.0},
+                        {5.0, 6.0, 7.0, 8.0},
+                        {9.0, 10.0, 11.0, 12.0},
+                        {13.0, 14.0, 15.0, 16.0},});
         Matrix B = new Matrix(new double[][]{
-                {5.0, 6.0},
-                {7.0,8.0}});
+                {17.0, 18.0, 19.0, 20.0},
+                {21.0, 22.0, 23.0, 24.0},
+                {25.0, 26.0, 27.0, 28.0},
+                {29.0, 30.0, 31.0, 32.0},});
 
-        System.out.println("Matrix A");
+        System.out.println("try1.Matrix A");
         A.show();
 
-        System.out.println("Matrix B");
+        System.out.println("try1.Matrix B");
         B.show();
 
         long a = System.currentTimeMillis();
         Matrix C = A.prdtMatricielle(B);
         long b = System.currentTimeMillis();
 
-        System.out.println("Matrix C");
+        System.out.println("Ma méthode");
         C.show();
 
-        Matrix.showComp();
-        System.out.println(b - a + " ms");
+        System.out.println("Réponse");
+        C = A.times(B);
+        C.show();
 
+    }
+
+    public int getM() {
+        return M;
+    }
+
+    public int getN() {
+        return N;
     }
 }
