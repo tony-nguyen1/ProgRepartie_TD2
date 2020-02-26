@@ -30,7 +30,7 @@ public class Operande extends Thread {
         this.dimLongueur = dimLongueur;
         this.id = id;
 
-        //System.out.println(this);
+        System.out.println(this);
     }
 
     @Override

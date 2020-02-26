@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="759079eb-0ba4-49a7-bae8-79df544ae7fb" name="Default Changelist" comment="ça marche">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/try1/MatrixMultiplier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/try2/Matrix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/try2/Operande.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TD2/Matrix.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TD2/Operande.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/try1/Matrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Operande.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/try1/Operande.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/try2/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/try2/Matrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/try2/Operande.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/try2/Operande.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,22 +19,23 @@
     </execution>
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/try2/Matrix.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="161" column="27" selection-start-line="161" selection-start-column="27" selection-end-line="161" selection-end-column="27" />
+            <state relative-caret-position="242">
+              <caret line="140" selection-start-line="140" selection-end-line="140" />
               <folding>
-                <element signature="e#392#423#0" expanded="true" />
-                <element signature="e#7379#7380#0" expanded="true" />
-                <element signature="e#7403#7404#0" expanded="true" />
-                <element signature="e#7428#7429#0" expanded="true" />
-                <element signature="e#7452#7453#0" expanded="true" />
+                <element signature="method#random#0;class#Matrix#0" />
+                <element signature="method#identity#0;class#Matrix#0" />
+                <element signature="method#swap#0;class#Matrix#0" />
+                <element signature="method#transpose#0;class#Matrix#0" />
+                <element signature="method#plus#0;class#Matrix#0" />
+                <element signature="method#minus#0;class#Matrix#0" />
+                <element signature="method#eq#0;class#Matrix#0" />
               </folding>
             </state>
           </provider>
@@ -49,11 +44,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/try2/Operande.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="58" column="92" selection-start-line="58" selection-start-column="92" selection-end-line="58" selection-end-column="92" />
-              <folding>
-                <element signature="e#14#45#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="930">
+              <caret line="62" column="9" lean-forward="true" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -81,16 +73,16 @@
         <option value="$PROJECT_DIR$/src/MatrixMultiplier.java" />
         <option value="$PROJECT_DIR$/src/Matrix.java" />
         <option value="$PROJECT_DIR$/src/try1/Matrix.java" />
-        <option value="$PROJECT_DIR$/src/try2/Matrix.java" />
         <option value="$PROJECT_DIR$/src/try2/Operande.java" />
+        <option value="$PROJECT_DIR$/src/try2/Matrix.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="7" />
-    <option name="y" value="-24" />
-    <option name="width" value="976" />
-    <option name="height" value="1056" />
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="x" value="993" />
+    <option name="y" value="27" />
+    <option name="width" value="927" />
+    <option name="height" value="1053" />
   </component>
   <component name="ProjectId" id="1XiBPMKJX9YQ6YW1UC94nlZ4yTK" />
   <component name="ProjectView">
@@ -98,14 +90,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="ProgRepartie_TD2" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProgRepartie_TD2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProgRepartie_TD2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProgRepartie_TD2" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProgRepartie_TD2" type="b2602c69:ProjectViewProjectNode" />
@@ -128,6 +123,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -202,17 +199,19 @@
       <workItem from="1581853712749" duration="3580000" />
       <workItem from="1582381096151" duration="3334000" />
       <workItem from="1582455061161" duration="6076000" />
+      <workItem from="1582723280568" duration="2274000" />
+      <workItem from="1582725815704" duration="687000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9410000" />
+    <option name="totallyTimeSpent" value="12371000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="993" y="27" width="927" height="1053" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25586355" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.53121454" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -221,7 +220,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5492958" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40800866" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -342,24 +341,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/try2/Operande.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="58" column="92" selection-start-line="58" selection-start-column="92" selection-end-line="58" selection-end-column="92" />
-          <folding>
-            <element signature="e#14#45#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="930">
+          <caret line="62" column="9" lean-forward="true" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/try2/Matrix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="161" column="27" selection-start-line="161" selection-start-column="27" selection-end-line="161" selection-end-column="27" />
+        <state relative-caret-position="242">
+          <caret line="140" selection-start-line="140" selection-end-line="140" />
           <folding>
-            <element signature="e#392#423#0" expanded="true" />
-            <element signature="e#7379#7380#0" expanded="true" />
-            <element signature="e#7403#7404#0" expanded="true" />
-            <element signature="e#7428#7429#0" expanded="true" />
-            <element signature="e#7452#7453#0" expanded="true" />
+            <element signature="method#random#0;class#Matrix#0" />
+            <element signature="method#identity#0;class#Matrix#0" />
+            <element signature="method#swap#0;class#Matrix#0" />
+            <element signature="method#transpose#0;class#Matrix#0" />
+            <element signature="method#plus#0;class#Matrix#0" />
+            <element signature="method#minus#0;class#Matrix#0" />
+            <element signature="method#eq#0;class#Matrix#0" />
           </folding>
         </state>
       </provider>
