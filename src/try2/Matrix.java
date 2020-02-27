@@ -144,6 +144,8 @@ final public class Matrix{
         lon = A.M/2;
         lar = A.N/2;
 
+        System.out.println("(" + lon + "," + lar + ")");
+
         //Création des 8 threads
         Operande op1_gauche, op2_gauche, op3_gauche, op4_gauche, op1_droite, op2_droite, op3_droite, op4_droite;
         op1_gauche = new Operande(result, 0,          0, lar, lon, A, B, "gauche");
@@ -156,13 +158,15 @@ final public class Matrix{
         op3_droite = new Operande(result, A.M/2,      0, lar, lon, A, B, "droite");
         op4_droite = new Operande(result, A.M/2, A.N/2,  lar, lon, A, B, "droite");
 
+        //System.out.println(op1_gauche);
+
         //démarrage des threads
-        op1_gauche.start();
-        op2_gauche.start();
+        /*op1_gauche.start();
+        op2_gauche.start();*/
         op3_gauche.start();
         op4_gauche.start();
-        op1_droite.start();
-        op2_droite.start();
+        /*op1_droite.start();
+        op2_droite.start();*/
         op3_droite.start();
         op4_droite.start();
 
@@ -213,7 +217,7 @@ final public class Matrix{
                 {29.0, 30.0, 31.0, 32.0},});
 
         A = random(4,4);//A.N == B.M
-        B = random(4,4);//mais A.M != B.N
+        B = random(4,5);//mais A.M != B.N
 
 
 

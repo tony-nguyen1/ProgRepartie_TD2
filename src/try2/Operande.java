@@ -29,8 +29,6 @@ public class Operande extends Thread {
         this.dimLargeur = dimLargeur;
         this.dimLongueur = dimLongueur;
         this.id = id;
-
-        System.out.println(this);
     }
 
     @Override
@@ -50,17 +48,21 @@ public class Operande extends Thread {
         final int C1 = id.equals("gauche") ? 0 : dimLargeur;
         final int C2 = id.equals("gauche") ? 0 : dimLongueur;
 
-        for (int c = startC; c < startC + dimLongueur; c++) {
-            for (int r = startR; r < startR + dimLargeur; r++) {
-                for (int k = 0; k < M.getN() / 2; k++) {
+        int c = 0, r = 0, k = 0;
+
+        System.out.println(startR + dimLargeur);
+
+        for (c = startC; c < startC + dimLongueur ; c++) {
+            for (r = startR; r < startR + dimLargeur +1; r++) {
+                for (k = 0; k < (M.getN() / 2); k++) {
                     //System.out.println("(" + c + "," + r + ") = M(" + c + "," + k + ") * N(" + k + "," + r + ")");
                     //System.out.println("" + M.getData()[c][k] * N.getData()[k][r] + " = " + M.getData()[c][k] + " * " + N.getData()[k][r]);
 
                     matrixResult.getData()[c][r] += (M.getData()[c][k+C1] * N.getData()[k+C2][r]);
                     Matrix.incrementeComplexity();
+                    System.out.println("" + c + r + k);
                 }
             }
         }
-
     }
 }
