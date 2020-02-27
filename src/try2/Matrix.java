@@ -137,6 +137,7 @@ final public class Matrix{
     public Matrix prdtMatricielle(Matrix B) {
         Matrix result = new Matrix(this.M, B.N); //initialisé à 0.000
         Matrix A = this;
+        if (A.N != B.M) throw new RuntimeException("Illegal matrix dimensions.");
 
         //dimensions des sous matrices
         int lar, lon;
@@ -211,6 +212,11 @@ final public class Matrix{
                 {25.0, 26.0, 27.0, 28.0},
                 {29.0, 30.0, 31.0, 32.0},});
 
+        A = random(4,4);//A.N == B.M
+        B = random(4,4);//mais A.M != B.N
+
+
+
         System.out.println("try1.Matrix A");
         A.show();
 
@@ -225,9 +231,10 @@ final public class Matrix{
         C.show();
 
         System.out.println("Réponse");
-        C = A.times(B);
-        C.show();
+        Matrix D = A.times(B);
+        D.show();
 
+        System.out.println(C.eq(D));
     }
 
     public int getM() {
