@@ -1,4 +1,4 @@
-package try1;
+package main.try1;
 
 public class MatrixMultiplier extends Thread {
 

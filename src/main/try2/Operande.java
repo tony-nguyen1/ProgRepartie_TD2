@@ -1,4 +1,4 @@
-package try2;
+package main.try2;
 @SuppressWarnings("Duplicates")
 public class Operande extends Thread {
 
@@ -42,27 +42,25 @@ public class Operande extends Thread {
                 '}';
     }
 
-    /*** Fait une multiplication entre 2 éléments des try1.Matrix M et N et additionne le produit dans la try1.Matrix résultat matrixResult */
+    /*** Fait une multiplication entre 2 éléments des main.try1.Matrix M et N et additionne le produit dans la main.try1.Matrix résultat matrixResult */
     @Override
     public void run() {
-        final int C1 = id.equals("gauche") ? 0 : dimLargeur;
-        final int C2 = id.equals("gauche") ? 0 : dimLongueur;
+        final int C1 = id.equals("gauche") ? 0 : M.getN()/2;
+        final int C2 = id.equals("gauche") ? 0 : M.getN()/2;
 
-        int c = 0, r = 0, k = 0;
-
-        System.out.println(startR + dimLargeur);
-
-        for (c = startC; c < startC + dimLongueur ; c++) {
-            for (r = startR; r < startR + dimLargeur +1; r++) {
-                for (k = 0; k < (M.getN() / 2); k++) {
-                    //System.out.println("(" + c + "," + r + ") = M(" + c + "," + k + ") * N(" + k + "," + r + ")");
+        for (int c = startC; c < startC + dimLongueur; c++) {
+            for (int r = startR; r < startR + dimLargeur; r++) {
+                for (int k = 0; k < (M.getN() / 2); k++) {
+                    System.out.println("(" + c + "," + r + ") = M(" + c + "," + (k+C1) + ") * N(" + (k+C2) + "," + r + ")");
                     //System.out.println("" + M.getData()[c][k] * N.getData()[k][r] + " = " + M.getData()[c][k] + " * " + N.getData()[k][r]);
 
-                    matrixResult.getData()[c][r] += (M.getData()[c][k+C1] * N.getData()[k+C2][r]);
-                    Matrix.incrementeComplexity();
-                    System.out.println("" + c + r + k);
+                    maj(c,r,(M.getData()[c][k+C1] * N.getData()[k+C2][r]));
                 }
             }
         }
+    }
+
+    public synchronized void maj(int i, int j, double val){ //TODO ici ça marche pas
+        matrixResult.getData()[i][j] += val;
     }
 }

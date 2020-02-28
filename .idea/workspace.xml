@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/main/try2/Matrix.java" line="205" mnemonic="8" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="759079eb-0ba4-49a7-bae8-79df544ae7fb" name="Default Changelist" comment="ça marche">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="759079eb-0ba4-49a7-bae8-79df544ae7fb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/try2/testMatrix.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TD2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TD2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/try2/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/try2/Matrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/try2/Operande.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/try2/Operande.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/try1/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/try1/Matrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/try1/MatrixMultiplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/try1/MatrixMultiplier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/try1/Operande.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/try1/Operande.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/try2/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/try2/Matrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/try2/Operande.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/try2/Operande.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,25 +31,42 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/try2/Matrix.java">
+        <entry file="file://$PROJECT_DIR$/src/main/try2/Matrix.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
-              <caret line="153" column="60" lean-forward="true" selection-start-line="153" selection-start-column="60" selection-end-line="153" selection-end-column="60" />
+            <state relative-caret-position="374">
+              <caret line="213" column="8" lean-forward="true" selection-start-line="213" selection-start-column="8" selection-end-line="213" selection-end-column="8" />
               <folding>
-                <element signature="e#7696#7697#0" expanded="true" />
-                <element signature="e#7720#7721#0" expanded="true" />
-                <element signature="e#7745#7746#0" expanded="true" />
-                <element signature="e#7769#7770#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#9114#9115#0" expanded="true" />
+                <element signature="e#9138#9139#0" expanded="true" />
+                <element signature="e#9163#9164#0" expanded="true" />
+                <element signature="e#9187#9188#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/try2/Operande.java">
+        <entry file="file://$PROJECT_DIR$/src/main/try2/Operande.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="55" column="55" selection-start-line="55" selection-start-column="55" selection-end-line="55" selection-end-column="55" />
+            <state relative-caret-position="314">
+              <caret line="64" column="37" lean-forward="true" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
+              <folding>
+                <element signature="e#2502#2503#0" expanded="true" />
+                <element signature="e#2552#2553#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/try2/testMatrix.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="155">
+              <caret line="96" selection-start-line="96" selection-end-line="96" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,7 +83,37 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>show</find>
+      <find>lar</find>
+      <find>rand</find>
+      <find>eq</find>
+      <find>equals</find>
+      <find>op3</find>
+      <find>op2_droite</find>
+      <find>droite</find>
+      <find>op1</find>
+      <find>gauche</find>
+      <find>1</find>
+      <find>10</find>
+      <find>bigger</find>
+      <find>largDroite, lonDroite,</find>
     </findStrings>
+    <replaceStrings>
+      <replace>largGauche</replace>
+      <replace>op1_gauche</replace>
+      <replace>gauche</replace>
+      <replace>op1</replace>
+      <replace>op2</replace>
+      <replace>op3</replace>
+      <replace>op4</replace>
+      <replace>droite</replace>
+      <replace>1</replace>
+      <replace>2</replace>
+      <replace>3</replace>
+      <replace>4</replace>
+      <replace>smaller</replace>
+      <replace>, lonGauche, largGauche,</replace>
+      <replace>lonDroite, largDroite,</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -73,6 +126,9 @@
         <option value="$PROJECT_DIR$/src/try1/Matrix.java" />
         <option value="$PROJECT_DIR$/src/try2/Operande.java" />
         <option value="$PROJECT_DIR$/src/try2/Matrix.java" />
+        <option value="$PROJECT_DIR$/src/test/try2/testMatrix.java" />
+        <option value="$PROJECT_DIR$/src/main/try2/Operande.java" />
+        <option value="$PROJECT_DIR$/src/main/try2/Matrix.java" />
       </list>
     </option>
   </component>
@@ -88,6 +144,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -109,7 +167,14 @@
               <item name="ProgRepartie_TD2" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProgRepartie_TD2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="try1" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProgRepartie_TD2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProgRepartie_TD2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="try2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProgRepartie_TD2" type="b2602c69:ProjectViewProjectNode" />
@@ -121,15 +186,17 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1582791230129" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1582850092142" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -154,13 +221,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Matrix (1)">
-    <configuration name="Matrix (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="try2.Matrix" />
+  <component name="RunManager" selected="JUnit.testMatrix">
+    <configuration name="Matrix" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.try2.Matrix" />
       <module name="TD2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="try2.*" />
+          <option name="PATTERN" value="main.try2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -168,17 +235,76 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Matrix" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="try1.Matrix" />
+    <configuration name="testMatrix" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TD2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.try2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.try2" />
+      <option name="MAIN_CLASS_NAME" value="test.try2.testMatrix" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testMatrix.test_prdtMatricielle_3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TD2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.try2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.try2" />
+      <option name="MAIN_CLASS_NAME" value="test.try2.testMatrix" />
+      <option name="METHOD_NAME" value="test_prdtMatricielle_3" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testMatrix.test_prdtMatricielle_m_bigger_and_odd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TD2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.try2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.try2" />
+      <option name="MAIN_CLASS_NAME" value="test.try2.testMatrix" />
+      <option name="METHOD_NAME" value="test_prdtMatricielle_m_bigger_and_odd" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testMatrix.test_prdtMatricielle_m_smaller_and_odd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TD2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.try2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.try2" />
+      <option name="MAIN_CLASS_NAME" value="test.try2.testMatrix" />
+      <option name="METHOD_NAME" value="test_prdtMatricielle_m_smaller_and_odd" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.testMatrix" />
+        <item itemvalue="JUnit.testMatrix.test_prdtMatricielle_m_bigger_and_odd" />
+        <item itemvalue="JUnit.testMatrix.test_prdtMatricielle_m_smaller_and_odd" />
+        <item itemvalue="JUnit.testMatrix.test_prdtMatricielle_3" />
         <item itemvalue="Application.Matrix (1)" />
-        <item itemvalue="Application.Matrix" />
       </list>
     </recent_temporary>
   </component>
@@ -199,16 +325,59 @@
       <workItem from="1582455061161" duration="6076000" />
       <workItem from="1582723280568" duration="2274000" />
       <workItem from="1582725815704" duration="687000" />
+      <workItem from="1582791262142" duration="73000" />
+      <workItem from="1582836953342" duration="13040000" />
     </task>
+    <task id="LOCAL-00001" summary="début de chgmt pour que ça marche sur matrice quelconque">
+      <created>1582791319280</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1582791319280</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="testMatrix_test_prdtMatricielle_m_bigger_and_odd - 2020.02.28 at 01h 27m 17s.xml">
+      <configuration name="testMatrix.test_prdtMatricielle_m_bigger_and_odd" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testMatrix_test_prdtMatricielle_m_bigger_and_odd - 2020.02.28 at 01h 27m 29s.xml">
+      <configuration name="testMatrix.test_prdtMatricielle_m_bigger_and_odd" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testMatrix_test_prdtMatricielle_m_bigger_and_odd - 2020.02.28 at 01h 29m 36s.xml">
+      <configuration name="testMatrix.test_prdtMatricielle_m_bigger_and_odd" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testMatrix_test_prdtMatricielle_m_bigger_and_odd - 2020.02.28 at 01h 29m 59s.xml">
+      <configuration name="testMatrix.test_prdtMatricielle_m_bigger_and_odd" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testMatrix_test_prdtMatricielle_m_bigger_and_odd - 2020.02.28 at 01h 30m 13s.xml">
+      <configuration name="testMatrix.test_prdtMatricielle_m_bigger_and_odd" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testMatrix - 2020.02.28 at 01h 30m 18s.xml">
+      <configuration name="testMatrix" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testMatrix_test_prdtMatricielle_m_bigger_and_odd - 2020.02.28 at 01h 32m 07s.xml">
+      <configuration name="testMatrix.test_prdtMatricielle_m_bigger_and_odd" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testMatrix_test_prdtMatricielle_m_bigger_and_odd - 2020.02.28 at 01h 32m 28s.xml">
+      <configuration name="testMatrix.test_prdtMatricielle_m_bigger_and_odd" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testMatrix_test_prdtMatricielle_m_bigger_and_odd - 2020.02.28 at 01h 33m 13s.xml">
+      <configuration name="testMatrix.test_prdtMatricielle_m_bigger_and_odd" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testMatrix_test_prdtMatricielle_m_bigger_and_odd - 2020.02.28 at 01h 33m 37s.xml">
+      <configuration name="testMatrix.test_prdtMatricielle_m_bigger_and_odd" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14202000" />
+    <option name="totallyTimeSpent" value="27315000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.26119402" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26066098" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -217,8 +386,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5124594" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.44203684" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -239,35 +408,35 @@
       <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info id="Image Layers" order="0" />
-      <window_info id="Designer" order="1" />
-      <window_info id="UI Designer" order="2" />
-      <window_info id="Capture Tool" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.25" />
-      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="1" />
-      <window_info anchor="bottom" id="Terminal" order="2" />
-      <window_info anchor="bottom" id="Database Changes" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="5" />
-      <window_info anchor="bottom" id="Message" order="6" />
-      <window_info anchor="bottom" id="Find" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="12" />
-      <window_info anchor="right" id="Palette" order="0" />
-      <window_info anchor="right" id="Database" order="1" />
-      <window_info anchor="right" id="Theme Preview" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Maven" order="5" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26066098" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.44203684" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936078" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32936078" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,24 +477,25 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ça marche" />
-    <option name="LAST_COMMIT_MESSAGE" value="ça marche" />
+    <MESSAGE value="début de chgmt pour que ça marche sur matrice quelconque" />
+    <option name="LAST_COMMIT_MESSAGE" value="début de chgmt pour que ça marche sur matrice quelconque" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/try1/Matrix.java">
+    <entry file="file://$PROJECT_DIR$/src/main/try1/Matrix.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="233" column="4" selection-start-line="233" selection-start-column="4" selection-end-line="240" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/try1/Operande.java">
+    <entry file="file://$PROJECT_DIR$/src/main/try1/Operande.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/try1/MatrixMultiplier.java">
+    <entry file="file://$PROJECT_DIR$/src/main/try1/MatrixMultiplier.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
@@ -336,22 +506,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/try2/Operande.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="55" column="55" selection-start-line="55" selection-start-column="55" selection-end-line="55" selection-end-column="55" />
+        <state relative-caret-position="141">
+          <caret line="745" column="16" selection-start-line="745" selection-start-column="16" selection-end-line="745" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/try2/Matrix.java">
+    <entry file="file://$PROJECT_DIR$/src/test/try2/testMatrix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="153" column="60" lean-forward="true" selection-start-line="153" selection-start-column="60" selection-end-line="153" selection-end-column="60" />
+        <state relative-caret-position="155">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
           <folding>
-            <element signature="e#7696#7697#0" expanded="true" />
-            <element signature="e#7720#7721#0" expanded="true" />
-            <element signature="e#7745#7746#0" expanded="true" />
-            <element signature="e#7769#7770#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/try2/Operande.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="64" column="37" lean-forward="true" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
+          <folding>
+            <element signature="e#2502#2503#0" expanded="true" />
+            <element signature="e#2552#2553#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/try2/Matrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="213" column="8" lean-forward="true" selection-start-line="213" selection-start-column="8" selection-end-line="213" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#9114#9115#0" expanded="true" />
+            <element signature="e#9138#9139#0" expanded="true" />
+            <element signature="e#9163#9164#0" expanded="true" />
+            <element signature="e#9187#9188#0" expanded="true" />
           </folding>
         </state>
       </provider>

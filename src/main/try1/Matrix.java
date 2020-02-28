@@ -1,13 +1,13 @@
-package try2;
+package main.try1;
 
 /******************************************************************************
- *  Compilation:  javac try1.Matrix.java
- *  Execution:    java try1.Matrix
+ *  Compilation:  javac main.try1.Matrix.java
+ *  Execution:    java main.try1.Matrix
  *                  https://introcs.cs.princeton.edu/java/95linear/Matrix.java
  *  A bare-bones immutable data type for M-by-N matrices.
  *
  ******************************************************************************/
-@SuppressWarnings("Duplicates")
+
 final public class Matrix{
     private final int M;             // number of rows
     private final int N;             // number of columns
@@ -127,7 +127,7 @@ final public class Matrix{
 
     /***
      * Pré-requis :
-     * this et B, 2 try1.Matrix de largeur N = 2 et longeur M = 2, 2*2
+     * this et B, 2 main.try1.Matrix de largeur N = 2 et longeur M = 2, 2*2
      *
      * Fait un produit matricielle avec des Threads
      *
@@ -137,38 +137,32 @@ final public class Matrix{
     public Matrix prdtMatricielle(Matrix B) {
         Matrix result = new Matrix(this.M, B.N); //initialisé à 0.000
         Matrix A = this;
-        if (A.N != B.M) throw new RuntimeException("Illegal matrix dimensions.");
 
         //dimensions des sous matrices
         int lar, lon;
         lon = A.M/2;
         lar = A.N/2;
 
-        System.out.println("(" + lon + "," + lar + ")");
-
         //Création des 8 threads
         Operande op1_gauche, op2_gauche, op3_gauche, op4_gauche, op1_droite, op2_droite, op3_droite, op4_droite;
         op1_gauche = new Operande(result, 0,          0, lar, lon, A, B, "gauche");
         op2_gauche = new Operande(result,0,       A.N/2, lar, lon, A, B, "gauche");
         op3_gauche = new Operande(result, A.M/2,      0, lar, lon, A, B, "gauche");
-        op4_gauche = new Operande(result, A.M/2, A.N/2,  lar, lon, A, B, "gauche");
-
+        op4_gauche = new Operande(result, A.M/2,          lar,  lar, lon, A, B, "gauche");
         op1_droite = new Operande(result, 0,          0, lar, lon, A, B, "droite");
         op2_droite = new Operande(result,0,       A.N/2, lar, lon, A, B, "droite");
         op3_droite = new Operande(result, A.M/2,      0, lar, lon, A, B, "droite");
         op4_droite = new Operande(result, A.M/2, A.N/2,  lar, lon, A, B, "droite");
 
-        //System.out.println(op1_gauche);
-
         //démarrage des threads
-        /*op1_gauche.start();
-        op2_gauche.start();*/
-        op3_gauche.start();
-        op4_gauche.start();
-        /*op1_droite.start();
-        op2_droite.start();*/
-        op3_droite.start();
-        op4_droite.start();
+        op1_gauche.start();
+        //op2_gauche.start();
+        //op3_gauche.start();
+        //op4_gauche.start();
+        //op1_droite.start();
+        //op2_droite.start();
+        //op3_droite.start();
+        //op4_droite.start();
 
         //pour assurer la fin du traitement de TOUS les threads
         try {
@@ -186,6 +180,55 @@ final public class Matrix{
         }
 
         return result;
+    }
+
+    //méthode de M.
+    public Matrix timesT(Matrix B) {
+        Matrix C = new Matrix(this.M, B.N);
+        // A = 0, 0
+        // B = M/2, 0
+        // C = 0, N/2
+        // D = M/2, N/2
+
+        MatrixMultiplier AAprime = new MatrixMultiplier(this, B, 0, 0, 0, 0);
+        MatrixMultiplier BCprime = new MatrixMultiplier(this, B, 0, M/2, B.N/2, 0);
+        MatrixMultiplier ABprime = new MatrixMultiplier(this, B, 0, 0, 0, B.M/2);
+        MatrixMultiplier BDprime = new MatrixMultiplier(this, B, 0, M/2, B.N/2, B.M/2);
+        MatrixMultiplier CAprime = new MatrixMultiplier(this, B, N/2, 0, 0, 0);
+        MatrixMultiplier DCprime = new MatrixMultiplier(this, B, N/2, M/2, B.N/2, 0);
+        MatrixMultiplier CBprime = new MatrixMultiplier(this, B, N/2, 0, 0, B.M/2);
+        MatrixMultiplier DDprime = new MatrixMultiplier(this, B, N/2, M/2, B.N/2, B.M/2);
+
+        AAprime.start();
+        BCprime.start();
+        ABprime.start();
+        BDprime.start();
+        CAprime.start();
+        DCprime.start();
+        CBprime.start();
+        DDprime.start();
+
+        /*try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }*/
+
+        try {
+            AAprime.join();
+            BCprime.join();
+            ABprime.join();
+            BDprime.join();
+            CAprime.join();
+            DCprime.join();
+            CBprime.join();
+            DDprime.join();
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        return MatrixMultiplier.getC();
     }
 
     // print matrix to standard output
@@ -216,15 +259,10 @@ final public class Matrix{
                 {25.0, 26.0, 27.0, 28.0},
                 {29.0, 30.0, 31.0, 32.0},});
 
-        A = random(4,4);//A.N == B.M
-        B = random(4,5);//mais A.M != B.N
-
-
-
-        System.out.println("try1.Matrix A");
+        System.out.println("main.try1.Matrix A");
         A.show();
 
-        System.out.println("try1.Matrix B");
+        System.out.println("main.try1.Matrix B");
         B.show();
 
         long a = System.currentTimeMillis();
@@ -235,10 +273,13 @@ final public class Matrix{
         C.show();
 
         System.out.println("Réponse");
-        Matrix D = A.times(B);
-        D.show();
+        C = A.times(B);
+        C.show();
 
-        System.out.println(C.eq(D));
+        System.out.println("Méthode de Mark");
+        C = A.timesT(B);
+        C.show();
+
     }
 
     public int getM() {
